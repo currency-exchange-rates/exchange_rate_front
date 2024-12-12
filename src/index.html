@@ -11,20 +11,32 @@
 
 <body class="page">
 
-<header class="header">
+<header class="header page-container">
   <div class="header__logo">
     <div class="header__logo-image"></div>
   </div>
 </header>
 
-<section class="main__section">
+<main class="content page-container">
 
-</section>
+  <section class="main">
+    <h1>Постоянные и надёжные данные о курсах валют для вас и вашего бизнеса</h1>
 
-<footer>
+    <form class="main__form" name="formEditProfile" novalidate>
+      <input class="main__input" id="currency-from" type="number" placeholder="Хочу продать"
+             name="currency-from" required minlength="1" maxlength="9">
+      <span class="error-message" id="error-name"></span>
+      <input class="main__input" id="currency-in" type="number" placeholder="Хочу получить"
+             name="currency-in" required minlength="1" maxlength="9">
+      <span class="error-message" id="error-job"></span>
+    </form>
+  </section>
 
+</main>
+
+<footer class="footer page-container">
+  <h1>Присоединяйтесь к нам в соцсетях</h1>
 </footer>
 
 </body>
-
 </html>

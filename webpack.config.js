@@ -4,7 +4,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { main: './src/index.ts' },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
@@ -25,6 +25,11 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test: /\.ts?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
                 // применять это правило только к CSS-файлам
                 test: /\.css$/,
                 // при обработке этих файлов нужно использовать
@@ -42,6 +47,9 @@ module.exports = {
                 type: 'asset/resource'
             },
         ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
         new HtmlWebpackPlugin({
