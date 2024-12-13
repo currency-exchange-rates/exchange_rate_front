@@ -1,7 +1,7 @@
 Технологии проекта:
-- HTML5
-- CSS3
-- JavaScript
+- HTML
+- CSS
+- TypeScript
 - Webpack
 - Figma
 
