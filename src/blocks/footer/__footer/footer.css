@@ -1,0 +1,20 @@
+.footer {
+  background-color: #346E82;
+  padding-inline: 200px;
+  padding-block: 46px;
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer p:first-of-type {
+  font-size: 20px;
+}
+
+.footer p:nth-of-type(2) {
+  font-size: 16px;
+  line-height: 20px;
+}

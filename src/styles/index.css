@@ -5,3 +5,14 @@
 
 @import url("../blocks/header/__logo/header__logo.css");
 @import url("../blocks/header/__logo-image/header__logo-image.css");
+@import url("../blocks/header/__logo-icon/header__logo-icon.css");
+@import url("../blocks//header/__logo-icon-container/header__logo-icon-container.css");
+
+@import url("../blocks/header/__header/header.css");
+@import url("../blocks/footer/__footer/footer.css");
+
+@import url("../blocks/footer/__socials-container/footer__socials-container.css");
+
+p {
+  margin: 0;
+}
