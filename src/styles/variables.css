@@ -23,8 +23,10 @@
   --text-r-s: var(--font-wg-r) var(--font-size-s) var(--font-lineheight-s) var(--main-font);
 
   /* Цвета */
-  --color-dark: #346E82;
-  --color-light: #F0F8FC;
-  --form-light: #FFFFFF;
-  --border-light: #E1E1E1;
+  --bg-dark: #346E82;
+  --bg-light: #F0F8FC;
+  --secondary-bg-light: #FFFFFF;
+  --secondary-border-light: #E1E1E1;
+  --secondary-light: #EAF2F6;
+  --secondary-dark: #CFDDE4;
 }
