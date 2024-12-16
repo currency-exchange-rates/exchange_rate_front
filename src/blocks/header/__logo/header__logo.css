@@ -1,0 +1,8 @@
+.header__logo {
+  color: var(--text-color-light);
+  font-family: var(--main-font);
+  font-size: var(--font-size-l);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

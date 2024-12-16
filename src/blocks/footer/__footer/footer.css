@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--bg-dark);
+  padding-inline: 200px;
+  padding-block: 46px;
+  color: #fff;
+  font-family: var(--main-font);
+  font-weight: var(--font-wg-r);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer p:first-of-type {
+  font-size: var(--font-size-l);
+}
+
+.footer p:nth-of-type(2) {
+  font-size: var(--font-size-m);
+  line-height: var(--font-lineheight-m);
+}
