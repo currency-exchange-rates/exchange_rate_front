@@ -21,15 +21,39 @@
 
   <section class="main">
     <h1>Постоянные и надёжные данные о курсах валют для вас и вашего бизнеса</h1>
-
-    <form class="main__form" name="formEditProfile" novalidate>
-      <input class="main__input" id="currency-from" type="number" placeholder="Хочу продать"
-             name="currency-from" required minlength="1" maxlength="9">
-      <span class="error-message" id="error-name"></span>
-      <input class="main__input" id="currency-in" type="number" placeholder="Хочу получить"
-             name="currency-in" required minlength="1" maxlength="9">
-      <span class="error-message" id="error-job"></span>
+    <form class="main__form" name="formExchangeRate" novalidate>
+      <label for="currency-select">Хочу продать</label>
+      <select class="main__form-select" name="currency" id="currency-select" size="1">
+        <option value="">Выберите влаюту</option>
+        <option value="petersburg">Санкт-Петербург</option>
+        <option value="samara">Самара</option>
+        <option value="perm">Пермь</option>
+        <option value="novosibirsk">Новосибирск</option>
+      </select>
+<!--      <label for="currency-in">Хочу получить</label>-->
+<!--        <option value="">&#45;&#45; Выберите город &#45;&#45;</option>-->
+<!--        <option value="petersburg">Санкт-Петербург</option>-->
+<!--        <option value="samara">Самара</option>-->
+<!--        <option value="perm">Пермь</option>-->
+<!--        <option value="novosibirsk">Новосибирск</option>-->
+      <input type="text" name="opt">
     </form>
+
+    <script>
+        let f = document.forms["formExchangeRate"],
+            s = f["currency"], o = s.querySelectorAll("option"),
+            inp = f["opt"],
+            reg;
+        inp.oninput = function() {
+            reg = new RegExp(this.value, "ig");  //если искать только в начале  "^" + this.value, "ig"
+            s.options.length = 0;
+            for (let i=0; i<o.length; i++)  {
+                reg.test(o[i].text) && s.options.add(o[i]);
+                reg.lastIndex = 0;
+            }
+        };
+    </script>
+
   </section>
 
 </main>
