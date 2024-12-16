@@ -1,0 +1,12 @@
+.form__button-swap {
+  background-image: url("../../../images/utils-icons/icon-arrows_change__default.svg");
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-size: cover;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 90px;
+}

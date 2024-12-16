@@ -20,39 +20,44 @@
 <main class="content page-container">
 
   <section class="main">
-    <h1>Постоянные и надёжные данные о курсах валют для вас и вашего бизнеса</h1>
-    <form class="main__form" name="formExchangeRate" novalidate>
-      <label for="currency-select">Хочу продать</label>
-      <select class="main__form-select" name="currency" id="currency-select" size="1">
-        <option value="">Выберите влаюту</option>
-        <option value="petersburg">Санкт-Петербург</option>
-        <option value="samara">Самара</option>
-        <option value="perm">Пермь</option>
-        <option value="novosibirsk">Новосибирск</option>
-      </select>
-<!--      <label for="currency-in">Хочу получить</label>-->
-<!--        <option value="">&#45;&#45; Выберите город &#45;&#45;</option>-->
-<!--        <option value="petersburg">Санкт-Петербург</option>-->
-<!--        <option value="samara">Самара</option>-->
-<!--        <option value="perm">Пермь</option>-->
-<!--        <option value="novosibirsk">Новосибирск</option>-->
-      <input type="text" name="opt">
-    </form>
+    <h1 class="main__title">Постоянные и надёжные данные о курсах валют <br> для вас и вашего бизнеса</h1>
+    <form class="form" name="formExchangeRate" novalidate>
+      <div class="form__container">
+        <div class="form__container-item">
+          <label class="form__label" for="currency-select-sell">Хочу продать</label>
+          <select class="form__select" name="currency" id="currency-select-sell" size="1">
+            <option class="form__select-option" value="">Выберите валюту</option>
+            <option value="1">Доллар США</option>
+            <option value="2">Фунт стерлингов</option>
+            <option value="3">Японская иена</option>
+            <option value="4">Российский рубль</option>
+          </select>
+        </div>
 
-    <script>
-        let f = document.forms["formExchangeRate"],
-            s = f["currency"], o = s.querySelectorAll("option"),
-            inp = f["opt"],
-            reg;
-        inp.oninput = function() {
-            reg = new RegExp(this.value, "ig");  //если искать только в начале  "^" + this.value, "ig"
-            s.options.length = 0;
-            for (let i=0; i<o.length; i++)  {
-                reg.test(o[i].text) && s.options.add(o[i]);
-                reg.lastIndex = 0;
-            }
-        };
-    </script>
+        <button class="form__button-swap">
+        </button>
+
+        <div class="form__container-item">
+          <label class="form__label" for="currency-select-buy">Хочу получить</label>
+          <select class="form__select" name="currency" id="currency-select-buy" size="1">
+            <option value="" selected>Выберите валюту</option>
+            <option value="1">Доллар США</option>
+            <option value="2">Фунт стерлингов</option>
+            <option value="3">Японская иена</option>
+            <option value="4">Российский рубль</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form__container">
+          <input class="form__input" id="value-input" type="text" placeholder="Введите сумму"
+                 name="value-input" required minlength="1" maxlength="7">
+
+          <input class="form__input" id="value-retrieval" type="text" placeholder="Вы получите"
+                 name="value-retrieval" required minlength="1" maxlength="7">
+      </div>
+
+    </form>
 
   </section>
 

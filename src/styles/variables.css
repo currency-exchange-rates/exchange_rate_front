@@ -12,7 +12,7 @@
   --font-lineheight-m: 20px;
   --font-lineheight-s: 14px;
   --text-color-main: #0B313F;
-  --text-color-light: #FFFFFF;
+  --text-color-light: #fff;
   --text-color-secondary: #A2BFCE;
   --text-color-accent: #346E82;
   --text-sb-xl: var(--font-wg-sb) var(--font-size-xl) var(--font-lineheight-xl) var(--main-font);
@@ -25,7 +25,7 @@
   /* Цвета */
   --bg-dark: #346E82;
   --bg-light: #F0F8FC;
-  --secondary-bg-light: #FFFFFF;
+  --secondary-bg-light: #fff;
   --secondary-border-light: #E1E1E1;
   --secondary-light: #EAF2F6;
   --secondary-dark: #CFDDE4;
