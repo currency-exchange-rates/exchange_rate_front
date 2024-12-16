@@ -1,7 +1,7 @@
 .header__logo {
-  color: #fff;
-  font-family: 'Exo2', sans-serif;
-  font-size: 20px;
+  color: var(--text-color-light);
+  font-family: var(--main-font);
+  font-size: var(--font-size-l);
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,4 +1,4 @@
 .header {
-  background-color: #346E82;
+  background-color: var(--bg-dark);
   padding-inline: 200px;
 }

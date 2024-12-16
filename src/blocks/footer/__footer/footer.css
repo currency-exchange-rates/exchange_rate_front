@@ -1,20 +1,20 @@
 .footer {
-  background-color: #346E82;
+  background-color: var(--bg-dark);
   padding-inline: 200px;
   padding-block: 46px;
   color: #fff;
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 400;
+  font-family: var(--main-font);
+  font-weight: var(--font-wg-r);
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 .footer p:first-of-type {
-  font-size: 20px;
+  font-size: var(--font-size-l);
 }
 
 .footer p:nth-of-type(2) {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: var(--font-size-m);
+  line-height: var(--font-lineheight-m);
 }
