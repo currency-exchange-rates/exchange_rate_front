@@ -1,0 +1,32 @@
+:root {
+  /* Типографика */
+  --main-font: 'Exo 2', sans-serif;
+  --font-wg-sb: 600;
+  --font-wg-r: 400;
+  --font-size-xl: 24px;
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-s: 12px;
+  --font-lineheight-xl: 28px;
+  --font-lineheight-l: 24px;
+  --font-lineheight-m: 20px;
+  --font-lineheight-s: 14px;
+  --text-color-main: #0B313F;
+  --text-color-light: #FFFFFF;
+  --text-color-secondary: #A2BFCE;
+  --text-color-accent: #346E82;
+  --text-sb-xl: var(--font-wg-sb) var(--font-size-xl) var(--font-lineheight-xl) var(--main-font);
+  --text-sb-l: var(--font-wg-sb) var(--font-size-l) var(--font-lineheight-l) var(--main-font);
+  --text-r-xl: var(--font-wg-r) var(--font-size-xl) var(--font-lineheight-xl) var(--main-font);
+  --text-r-l: var(--font-wg-r) var(--font-size-l) var(--main-font);
+  --text-r-m: var(--font-wg-r) var(--font-size-m) var(--font-lineheight-m) var(--main-font);
+  --text-r-s: var(--font-wg-r) var(--font-size-s) var(--font-lineheight-s) var(--main-font);
+
+  /* Цвета */
+  --bg-dark: #346E82;
+  --bg-light: #F0F8FC;
+  --secondary-bg-light: #FFFFFF;
+  --secondary-border-light: #E1E1E1;
+  --secondary-light: #EAF2F6;
+  --secondary-dark: #CFDDE4;
+}

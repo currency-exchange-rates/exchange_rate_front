@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		url('./Exo2-Regular.ttf') format('truetype'),
+		url('./Exo2-Regular.woff') format('woff'),
+		url('./Exo2-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src:
+		url('./Exo2-SemiBold.ttf') format('truetype'),
+		url('./Exo2-SemiBold.woff') format('woff'),
+		url('./Exo2-SemiBold.woff2') format('woff2');
+}
