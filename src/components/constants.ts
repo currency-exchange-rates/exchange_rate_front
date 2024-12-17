@@ -1,1 +1,0 @@
-export const selectItem = document.querySelector('.form__select');
