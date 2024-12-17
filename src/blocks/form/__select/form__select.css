@@ -8,7 +8,7 @@
   color: var(--text-color-secondary);
   text-indent: 28px;
   appearance: none;
-  background-image: url('public/images/utils-icons/icon-arrow_down.svg');
+  background-image: url('../../../../public/images/utils-icons/icon-arrow_down.svg');
   background-repeat: no-repeat;
   background-position-x: calc(100% - 24px);
   background-position-y: calc(100% - 24px);
@@ -16,7 +16,7 @@
 
 .form__select:active {
   color: var(--text-color-main);
-  background-image: url('public/images/utils-icons/icon-arrow_up.svg');
+  background-image: url('../../../../public/images/utils-icons/icon-arrow_up.svg');
   background-position-x: calc(100% - 24px);
   background-position-y: calc(100% - 24px);
   position:relative;
