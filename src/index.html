@@ -25,14 +25,19 @@
 
   <section class="main">
     <h1>Постоянные и надёжные данные о курсах валют для вас и вашего бизнеса</h1>
-
-    <form class="main__form" name="formEditProfile" novalidate>
-      <input class="main__input" id="currency-from" type="number" placeholder="Хочу продать"
-            name="currency-from" required minlength="1" maxlength="9">
-      <span class="error-message" id="error-name"></span>
-      <input class="main__input" id="currency-in" type="number" placeholder="Хочу получить"
-            name="currency-in" required minlength="1" maxlength="9">
-      <span class="error-message" id="error-job"></span>
+    <form class="main__form" id="currency-form">
+      <input class="main__input" id="currency-from" type="number" placeholder="Хочу продать" name="currency-from" required>
+      <input class="main__input" id="currency-to" type="number" placeholder="Хочу получить" name="currency-to" readonly>
+      <select class="main__select" id="base-currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+      </select>
+      <select class="main__select" id="target-currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="RUB">RUB</option>
+      </select>
     </form>
   </section>
 
