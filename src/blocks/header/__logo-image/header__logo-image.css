@@ -1,6 +1,9 @@
 .header__logo-image {
-  background-image: url("../../../images/logo.svg");
+  background-image: url("../../../../public/images/logo-light.svg");
   background-repeat: no-repeat;
   margin-top: 32px;
   padding: 32px 20px;
+  width: 232px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
