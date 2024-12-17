@@ -1,9 +1,27 @@
 .form {
-  background-color: var(--secondary-bg-light);
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   gap: 32px;
   padding: 52px 55px 80px 55px;
+}
+
+@media (max-width: 880px) {
+  .form {
+    justify-content: center;
+    gap: 50px;
+    padding: 24px 20px 100px 20px;
+  }
+}
+
+@media (max-width: 880px) {
+  .form {
+    justify-content: center;
+    gap: 50px;
+    padding: 24px 20px 60px 20px;
+  }
 }

@@ -8,5 +8,15 @@
   border-radius: 50%;
   position: absolute;
   z-index: 10;
-  top: 90px;
+  top: 96px;
+}
+
+@media (max-width: 880px) {
+  .form__button-swap {
+    rotate: 90deg;
+    left: 44%;
+    top: 92px;
+    width: 44px;
+    height: 44px;
+  }
 }
