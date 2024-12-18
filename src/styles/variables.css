@@ -15,12 +15,12 @@
   --text-color-light: #fff;
   --text-color-secondary: #A2BFCE;
   --text-color-accent: #346E82;
-  --text-sb-xl: var(--font-wg-sb) var(--font-size-xl) var(--font-lineheight-xl) var(--main-font);
-  --text-sb-l: var(--font-wg-sb) var(--font-size-l) var(--font-lineheight-l) var(--main-font);
-  --text-r-xl: var(--font-wg-r) var(--font-size-xl) var(--font-lineheight-xl) var(--main-font);
-  --text-r-l: var(--font-wg-r) var(--font-size-l) var(--main-font);
-  --text-r-m: var(--font-wg-r) var(--font-size-m) var(--font-lineheight-m) var(--main-font);
-  --text-r-s: var(--font-wg-r) var(--font-size-s) var(--font-lineheight-s) var(--main-font);
+  --text-sb-xl: var(--font-wg-sb) var(--font-size-xl) / var(--font-lineheight-xl) var(--main-font);
+  --text-sb-l: var(--font-wg-sb) var(--font-size-l) / var(--font-lineheight-l) var(--main-font);
+  --text-r-xl: var(--font-wg-r) var(--font-size-xl) / var(--font-lineheight-xl) var(--main-font);
+  --text-r-l: var(--font-wg-r) var(--font-size-l) / var(--font-lineheight-l) var(--main-font);
+  --text-r-m: var(--font-wg-r) var(--font-size-m) / var(--font-lineheight-m) var(--main-font);
+  --text-r-s: var(--font-wg-r) var(--font-size-s) / var(--font-lineheight-s) var(--main-font);
 
   /* Цвета */
   --bg-dark: #346E82;

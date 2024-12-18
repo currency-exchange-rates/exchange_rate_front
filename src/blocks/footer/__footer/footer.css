@@ -1,7 +1,6 @@
 .footer {
   background-color: var(--bg-dark);
-  padding-inline: 200px;
-  padding-block: 46px;
+  padding: 25px 200px;
   color: #fff;
   font-family: var(--main-font);
   font-weight: var(--font-wg-r);
@@ -17,4 +16,31 @@
 .footer p:nth-of-type(2) {
   font-size: var(--font-size-m);
   line-height: var(--font-lineheight-m);
+}
+
+@media (max-width: 1080px) {
+  .footer{
+    padding-inline: 100px;
+  }
+}
+
+@media (max-width: 880px) {
+  .footer{
+    padding-inline: 50px;
+    font-size: var(--font-size-l);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer{
+    padding-inline: 20px;
+    font-size: var(--font-size-l);
+  }
+}
+
+@media (max-width: 360px) {
+  .footer{
+    padding-inline: 15px;
+    font-size: var(--font-size-l);
+  }
 }

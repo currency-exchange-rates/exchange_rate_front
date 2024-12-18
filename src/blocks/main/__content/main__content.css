@@ -1,0 +1,15 @@
+.main__content {
+  margin: 0 auto;
+}
+
+@media (max-width: 880px) {
+  .main__content {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__content {
+    margin-bottom: 50px;
+  }
+}
