@@ -1,0 +1,24 @@
+.form__select {
+  background-color: var(--secondary-light);
+  width: 270px;
+  height: 60px;
+  border-style: none;
+  border-radius: 12px;
+  font: var(--text-r-m);
+  color: var(--text-color-secondary);
+  text-indent: 28px;
+  appearance: none;
+  background-image: url('../../../../public/images/utils-icons/icon-arrow_down.svg');
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 24px);
+  background-position-y: calc(100% - 24px);
+}
+
+.form__select:active {
+  color: var(--text-color-main);
+  background-image: url('../../../../public/images/utils-icons/icon-arrow_up.svg');
+  background-position-x: calc(100% - 24px);
+  background-position-y: calc(100% - 24px);
+  position:relative;
+  bottom:-50px;
+}

@@ -1,0 +1,4 @@
+.main__title {
+  font: var(--text-sb-xl);
+  color: var(--text-color-main);
+}
