@@ -7,6 +7,8 @@ const rates: CurrencyRates = {
   USD: 1,
   EUR: 0.85,
   RUB: 75,
+  GBP: 0.73,
+  JPY: 110,
 };
 
 const elements: Elements = {
@@ -16,6 +18,8 @@ const elements: Elements = {
   targetCurrencySelect: document.getElementById('target-currency') as HTMLSelectElement,
   form: document.getElementById('currency-form') as HTMLFormElement,
 };
+
+const swapButton = document.querySelector('.form__button-swap');
 
 elements.form.addEventListener('input', () => {
   const amount = parseFloat(elements.amountInput.value);
@@ -33,4 +37,19 @@ elements.form.addEventListener('input', () => {
   } catch (error) {
     console.error(error);
   }
-})
+});
+
+swapButton?.addEventListener('click', (event) => {
+  event.preventDefault();
+  const baseCurrencyValue = elements.baseCurrencySelect.value;
+  const targetCurrencyValue = elements.targetCurrencySelect.value;
+
+  const baseAmountValue = elements.amountInput.value;
+  const targetAmountyValue = elements.resultInput.value;
+
+  elements.baseCurrencySelect.value = targetCurrencyValue;
+  elements.targetCurrencySelect.value = baseCurrencyValue;
+
+  elements.amountInput.value = targetAmountyValue;
+  elements.resultInput.value = baseAmountValue;
+});
