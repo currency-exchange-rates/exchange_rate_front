@@ -9,6 +9,7 @@
   position: absolute;
   z-index: 10;
   top: 96px;
+  cursor: pointer;
 }
 
 @media (max-width: 880px) {

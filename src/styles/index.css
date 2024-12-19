@@ -24,7 +24,6 @@
 @import url('../blocks/form/__container/form__container.css');
 @import url('../blocks/form/__container-item/form__container-item.css');
 @import url('../blocks/form/__button-swap/form__button-swap.css');
-@import url('../blocks/form/__select-option/form__select-option.css');
 @import url('../blocks/form/__input/form__input.css');
 
 p {

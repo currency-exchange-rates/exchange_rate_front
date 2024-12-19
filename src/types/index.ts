@@ -1,4 +1,3 @@
-// определяет тип данных для валют с учетом кода валюты и ее численного значения
 export interface CurrencyRates {
   [key: string]: number;
 }
