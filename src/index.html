@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Exchange rate</title>
 </head>
 <body class="page">
@@ -22,13 +23,14 @@
       <div class="form__container">
         <div class="form__container-item">
           <label class="form__label" for="base-currency">Хочу продать</label>
-          <select class="form__select" name="currency" id="base-currency" size="1">
+          <!-- <select class="form__select" name="currency" id="base-currency" size="1">
             <option class="form__select-option" value="">Выберите валюту</option>
             <option value="USD">Доллар США</option>
             <option value="GBP">Фунт стерлингов</option>
             <option value="JPY">Японская иена</option>
             <option value="RUB">Российский рубль</option>
-          </select>
+          </select> -->
+          <div id="custom-select-container-base"></div>
         </div>
 
         <button class="form__button-swap">
@@ -36,13 +38,14 @@
 
         <div class="form__container-item">
           <label class="form__label" for="target-currency">Хочу получить</label>
-          <select class="form__select" name="currency" id="target-currency" size="1">
+          <!-- <select class="form__select" name="currency" id="target-currency" size="1">
             <option value="" selected>Выберите валюту</option>
             <option value="USD">Доллар США</option>
             <option value="GBP">Фунт стерлингов</option>
             <option value="JPY">Японская иена</option>
             <option value="RUB">Российский рубль</option>
-          </select>
+          </select> -->
+          <div id="custom-select-container-target"></div>
         </div>
       </div>
 
