@@ -9,3 +9,7 @@ export type Elements = {
   targetCurrencySelect: HTMLSelectElement;
   form: HTMLFormElement;
 };
+
+export type ServerResponse<T> = {
+  success: boolean;
+} & T;
