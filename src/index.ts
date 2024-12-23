@@ -1,55 +1,112 @@
 import './styles/index.css';
-import { CurrencyRates, Elements } from './types';
-import { handlerCurrency } from './utils/currency-handler';
+import { CurrencyRates, ICustomSelect } from './types';
 
-// моковые данные для теста функции
 const rates: CurrencyRates = {
   USD: 1,
   EUR: 0.85,
-  RUB: 75,
-  GBP: 0.73,
+  RUB: 75.5,
+  GBP: 0.75,
   JPY: 110,
 };
 
-const elements: Elements = {
-  amountInput: document.getElementById('currency-from') as HTMLInputElement,
-  resultInput: document.getElementById('currency-to') as HTMLInputElement,
-  baseCurrencySelect: document.getElementById('base-currency') as HTMLSelectElement,
-  targetCurrencySelect: document.getElementById('target-currency') as HTMLSelectElement,
-  form: document.getElementById('currency-form') as HTMLFormElement,
+// Получаем элементы
+const swapButton = document.querySelector('.form__button-swap') as HTMLButtonElement;
+const currencyFromInput = document.querySelector('#currency-from') as HTMLInputElement;
+const currencyToInput = document.querySelector('#currency-to') as HTMLInputElement;
+const baseCurrencySelect = document.querySelector('#custom-select-container-base') as HTMLElement;
+const targetCurrencySelect = document.querySelector('#custom-select-container-target') as HTMLElement;
+
+// Функция смены значений
+function swapCurrencies(): void {
+  const baseCurrencyValue: string = baseCurrencySelect.querySelector('button')?.value || '';
+  const targetCurrencyValue: string = targetCurrencySelect.querySelector('button')?.value || '';
+  const baseAmount = parseFloat(currencyFromInput.value) || 0;
+
+  const targetAmount = (baseAmount * rates[targetCurrencyValue] / rates[baseCurrencyValue]).toFixed(2);
+
+  currencyFromInput.value = targetAmount;
+  currencyToInput.value = baseAmount.toString();
+
+  baseCurrencySelect.querySelector('button')!.value = targetCurrencyValue;
+  targetCurrencySelect.querySelector('button')!.value = baseCurrencyValue;
+
+  const baseCurrencyOption = baseCurrencySelect.querySelector(`[data-value="${targetCurrencyValue}"]`);
+  const targetCurrencyOption = targetCurrencySelect.querySelector(`[data-value="${baseCurrencyValue}"]`);
+
+  const baseCurrencyButton = baseCurrencySelect.querySelector('button')!;
+  const targetCurrencyButton = targetCurrencySelect.querySelector('button')!;
+
+  baseCurrencyButton.innerHTML = '';
+  targetCurrencyButton.innerHTML = '';
+
+  const newBaseCurrencyImage = document.createElement('img');
+  newBaseCurrencyImage.src = `/images/countries-icons/${targetCurrencyValue.toUpperCase()}.svg`;
+  newBaseCurrencyImage.alt = targetCurrencyValue;
+  baseCurrencyButton.appendChild(newBaseCurrencyImage);
+
+  const newTargetCurrencyImage = document.createElement('img');
+  newTargetCurrencyImage.src = `/images/countries-icons/${baseCurrencyValue.toUpperCase()}.svg`;
+  newTargetCurrencyImage.alt = baseCurrencyValue;
+  targetCurrencyButton.appendChild(newTargetCurrencyImage);
+
+  if (baseCurrencyOption) {
+    const baseCurrencyText = document.createTextNode(baseCurrencyOption.textContent || '');
+    baseCurrencyButton.appendChild(baseCurrencyText);
+  }
+  if (targetCurrencyOption) {
+    const targetCurrencyText = document.createTextNode(targetCurrencyOption.textContent || '');
+    targetCurrencyButton.appendChild(targetCurrencyText);
+  }
+}
+
+// Создание кастомных селекторов
+const baseCurrencySelectParams = {
+  name: 'base-currency',
+  options: [
+    ['USD', '(USD) Доллар США'],
+    ['EUR', '(Euro) Евро'],
+    ['RUB', '(RUB) Российский рубль'],
+    ['GBP', '(GBP) Фунт стерлингов'],
+    ['JPY', '(JPY) Японская иена'],
+  ] as [string, string][],
 };
 
-const swapButton = document.querySelector('.form__button-swap');
+const targetCurrencySelectParams = {
+  name: 'target-currency',
+  options: [
+    ['USD', '(USD) Доллар США'],
+    ['EUR', '(Euro) Евро'],
+    ['RUB', '(RUB) Российский рубль'],
+    ['GBP', '(GBP) Фунт стерлингов'],
+    ['JPY', '(JPY) Японская иена'],
+  ] as [string, string][],
+};
 
-elements.form.addEventListener('input', () => {
-  const amount = parseFloat(elements.amountInput.value);
-  const baseCurrency = elements.baseCurrencySelect.value;
-  const targetCurrency = elements.targetCurrencySelect.value;
+// Инициализация кастомных селекторов
+ICustomSelect.create('#custom-select-container-base', baseCurrencySelectParams);
+ICustomSelect.create('#custom-select-container-target', targetCurrencySelectParams);
 
-  if (isNaN(amount) || amount <= 0) {
-    elements.resultInput.value = '';
+// Добавляем обработчик на кнопку
+swapButton.addEventListener('click', (e: MouseEvent) => {
+  e.preventDefault();
+  swapCurrencies();
+});
+
+// Функция для обработки ввода в поля
+function updateCurrencyTo(): void {
+  const baseAmount = parseFloat(currencyFromInput.value);
+  if (isNaN(baseAmount)) {
+    currencyToInput.value = "";
     return;
   }
+  const baseCurrencyValue: string = baseCurrencySelect.querySelector('button')?.value || '';
+  const targetCurrencyValue: string = targetCurrencySelect.querySelector('button')?.value || '';
+  const targetAmount = (baseAmount * rates[targetCurrencyValue] / rates[baseCurrencyValue]).toFixed(2);
+  currencyToInput.value = targetAmount;
+}
 
-  try {
-    const result = handlerCurrency(amount, baseCurrency, targetCurrency, rates);
-    elements.resultInput.value = result.toString();
-  } catch (error) {
-    console.error(error);
-  }
-});
+// Добавляем обработчик на изменение значения в поле "currency-from"
+currencyFromInput.addEventListener('input', updateCurrencyTo);
 
-swapButton?.addEventListener('click', (event) => {
-  event.preventDefault();
-  const baseCurrencyValue = elements.baseCurrencySelect.value;
-  const targetCurrencyValue = elements.targetCurrencySelect.value;
-
-  const baseAmountValue = elements.amountInput.value;
-  const targetAmountyValue = elements.resultInput.value;
-
-  elements.baseCurrencySelect.value = targetCurrencyValue;
-  elements.targetCurrencySelect.value = baseCurrencyValue;
-
-  elements.amountInput.value = targetAmountyValue;
-  elements.resultInput.value = baseAmountValue;
-});
+// Инициализация работы с кастомными селекторами
+ICustomSelect.hideOpenSelect();
