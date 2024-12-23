@@ -16,8 +16,14 @@
   .form__button-swap {
     rotate: 90deg;
     left: 44%;
-    top: 92px;
+    top: 86px;
     width: 44px;
     height: 44px;
+  }
+}
+
+@media (max-width: 550px) {
+  .form__button-swap {
+    left: 42%;
   }
 }

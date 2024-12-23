@@ -8,7 +8,7 @@
 @media (max-width: 880px) {
   .form__label {
     font: var(--text-r-m);
-    margin-bottom: 0;
+    margin-bottom: 4px;
     padding-left: 0;
   }
 }

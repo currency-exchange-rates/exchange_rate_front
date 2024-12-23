@@ -1,5 +1,7 @@
 import './styles/index.css';
 import { CurrencyRates, ICustomSelect } from './types';
+import {createInitialInfo} from "./utils/info";
+import {getInitialInfo} from "./utils/api";
 
 const rates: CurrencyRates = {
   USD: 1,
@@ -110,3 +112,12 @@ currencyFromInput.addEventListener('input', updateCurrencyTo);
 
 // Инициализация работы с кастомными селекторами
 ICustomSelect.hideOpenSelect();
+
+
+
+
+// Promise.all([getInitialInfo()])
+//   .then(([ items]) => {
+//     createInitialInfo(items);
+//   })
+//   .catch(console.error);

@@ -242,7 +242,3 @@ export class ICustomSelect {
 }
 
 ICustomSelect.hideOpenSelect();
-
-export type ServerResponse<T> = {
-  success: boolean;
-} & T;

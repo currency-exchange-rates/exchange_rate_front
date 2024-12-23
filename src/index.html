@@ -23,13 +23,6 @@
       <div class="form__container">
         <div class="form__container-item">
           <label class="form__label" for="base-currency">Хочу продать</label>
-          <!-- <select class="form__select" name="currency" id="base-currency" size="1">
-            <option class="form__select-option" value="">Выберите валюту</option>
-            <option value="USD">Доллар США</option>
-            <option value="GBP">Фунт стерлингов</option>
-            <option value="JPY">Японская иена</option>
-            <option value="RUB">Российский рубль</option>
-          </select> -->
           <div id="custom-select-container-base"></div>
         </div>
 
@@ -38,13 +31,6 @@
 
         <div class="form__container-item">
           <label class="form__label" for="target-currency">Хочу получить</label>
-          <!-- <select class="form__select" name="currency" id="target-currency" size="1">
-            <option value="" selected>Выберите валюту</option>
-            <option value="USD">Доллар США</option>
-            <option value="GBP">Фунт стерлингов</option>
-            <option value="JPY">Японская иена</option>
-            <option value="RUB">Российский рубль</option>
-          </select> -->
           <div id="custom-select-container-target"></div>
         </div>
       </div>
@@ -67,6 +53,10 @@
           name="currency-to" readonly minlength="1" maxlength="25"
         >
       </div>
+
+      <ul class="info__list">
+      </ul>
+
     </form>
   </section>
 </main>
@@ -100,5 +90,12 @@
   </div>
   <p>© Все права защищены</p>
 </footer>
+
+
+<template id="template-info">
+  <li class="info__item">
+    <p class="info__item-text"></p>
+  </li>
+</template>
 </body>
 </html>
