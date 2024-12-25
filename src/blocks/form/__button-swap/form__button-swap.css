@@ -1,15 +1,35 @@
 .form__button-swap {
-  background-image: url("../../../../public/images/utils-icons/icon-arrows_change__default.svg");
+  background-image: url('../../../../public/images/utils-icons/icon-arrows_change__default.svg');
   width: 60px;
   height: 60px;
   border: none;
   background-size: cover;
-  background-color: #fff;
+  background-color: var(--secondary-bg-light);
   border-radius: 50%;
   position: absolute;
   z-index: 10;
   top: 96px;
   cursor: pointer;
+  transition: background-color 0.3s ease, background-size 0.3s ease, transform 0.3s ease;
+}
+
+.form__button-swap:hover {
+  background-color: var(--secondary-dark);
+  transform: scale(1.1);
+}
+
+.form__button-swap:active {
+  background-color: var(--bg-dark);
+  background-image: url('../../../../public/images/utils-icons/icon-arrows_change__pressed.svg');
+  background-size: 33px 33px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(0.9);
+}
+
+.form__button-swap-disabled {
+  background-color: var(--secondary-border-light);
+  cursor: not-allowed;
 }
 
 @media (max-width: 880px) {
@@ -19,5 +39,6 @@
     top: 92px;
     width: 44px;
     height: 44px;
+    transition: background-color 0.3s ease, background-size 0.3s ease, transform 0.3s ease;
   }
 }

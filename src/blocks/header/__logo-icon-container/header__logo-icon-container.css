@@ -3,4 +3,18 @@
   gap: 5px;
   align-items: center;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.header__logo-icon-container:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header__logo-icon-container:active {
+  transform: scale(0.95);
+  background-color: rgba(0, 0, 0, 0.2);
 }

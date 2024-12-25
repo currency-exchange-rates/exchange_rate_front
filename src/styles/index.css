@@ -31,3 +31,10 @@
 p {
   margin: 0;
 }
+
+button {
+  background-color: transparent;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
