@@ -32,6 +32,7 @@
   text-overflow: ellipsis;
   cursor: pointer;
   box-sizing: border-box;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Стрелка вниз (по умолчанию) */
@@ -62,15 +63,17 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  max-height: 200px;
-  overflow-y: auto;
+  max-height: 0;
+  overflow-y: hidden;
   background-color: var(--secondary-light);
   color: var(--text-color-main);
-  display: none;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   margin-top: 0;
   padding: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* WebKit: стиль ползунка */
@@ -80,12 +83,12 @@
 
 /* WebKit: трек (фон полосы прокрутки) */
 .custom-select-dropdown::-webkit-scrollbar-track {
-  background: transparent; /* Цвет фона */
+  background: transparent;
 }
 
 .custom-select-dropdown::-webkit-scrollbar-thumb {
-  background: #868686; /* Цвет ползунка */
-  border-radius: 4px; /* Скругление ползунка */
+  background: #868686;
+  border-radius: 4px;
 }
 
 /* Когда селектор закрыт, кнопка должна иметь полное скругление */
@@ -101,7 +104,10 @@
 
 /* Отображение раскрытого дропдауна */
 .custom-select--show .custom-select-dropdown {
-  display: block;
+  max-height: 200px;
+  overflow-y: auto;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Список опций */
