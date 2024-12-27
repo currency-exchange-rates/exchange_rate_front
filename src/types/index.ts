@@ -31,7 +31,7 @@ export class ICustomSelect {
     let selectedValue = '';
     let selectedContent = 'Выберите валюту';
     let selectedIconPath = '';
-  
+
     options.forEach(([value, text], index) => {
       const selectedClass = value === targetValue ? ` ${this.OPTION_SELECTED}` : '';
       if (value === targetValue) {
@@ -48,7 +48,7 @@ export class ICustomSelect {
         </li>`
       );
     });
-  
+
     return `
       <button type="button" class="${this.SELECT}-toggle" name="${name}" value="${selectedValue}" data-select="toggle" data-index="${selectedIndex}">
       ${selectedIconPath ? `<img src="${selectedIconPath}" alt="${selectedValue}" class="custom-option-icon">` : ''}
@@ -117,38 +117,38 @@ export class ICustomSelect {
   private _updateOption(el: HTMLElement) {
     const elOption = el.closest(`.${ICustomSelect.OPTION}`) as HTMLElement | null;
     const elOptionSel = this._el.querySelector(`.${ICustomSelect.OPTION_SELECTED}`) as HTMLElement | null;
-  
+
     if (elOptionSel) {
       elOptionSel.classList.remove(ICustomSelect.OPTION_SELECTED);
     }
     elOption?.classList.add(ICustomSelect.OPTION_SELECTED);
-  
+
     if (this._elToggle) {
       this._elToggle.textContent = elOption?.textContent ?? 'Выберите валюту';
       this._elToggle.value = elOption?.dataset.value ?? '';
       this._elToggle.dataset.index = elOption?.dataset.index ?? '-1';
-  
+
       // Обновляем путь к иконке для выбранной валюты
       const selectedValue = elOption?.dataset.value ?? '';
       const iconPath = `/images/countries-icons/${selectedValue.toUpperCase()}.svg`;  // Путь к иконке
       let iconImg = this._elToggle.querySelector('img') as HTMLImageElement;
-  
+
       if (!iconImg) {
         // Если img не найден, создайте его
         iconImg = document.createElement('img');
         this._elToggle.insertBefore(iconImg, this._elToggle.firstChild); // Вставляем img в начало кнопки
       }
-  
+
       iconImg.src = iconPath;  // Обновляем путь к изображению
       iconImg.alt = selectedValue;  // Обновляем атрибут alt
-  
+
       // Убираем класс для отображения открытого селектора
       this._el.classList.remove('custom-select--open'); // Убираем класс, который открыл дропдаун
       this._elToggle.classList.remove('custom-select-toggle--up'); // Убираем стрелку вверх
       this._elToggle.classList.add('custom-select-toggle--down'); // Стрелка вниз
       this._el.classList.remove('custom-select--open'); // Возвращаем нормальный вид кнопки
     }
-  
+
     this._el.dispatchEvent(new CustomEvent('select.change'));
     this._params.onSelected?.(this, elOption);
   }
@@ -242,3 +242,21 @@ export class ICustomSelect {
 }
 
 ICustomSelect.hideOpenSelect();
+
+
+export interface TCurrencyCode {
+  string: number
+}
+
+export interface TCurrencyInfo {
+  "base_currency": string,
+  "rates": TCurrencyCode[]
+}
+
+export type ServerResponse<T> = {
+  success: boolean;
+} & T;
+
+export type CurrencyInfoResponse = ServerResponse<{
+  info: TCurrencyInfo;
+}>
