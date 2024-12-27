@@ -242,3 +242,21 @@ export class ICustomSelect {
 }
 
 ICustomSelect.hideOpenSelect();
+
+
+export interface TCurrencyCode {
+  string: number
+}
+
+export interface TCurrencyInfo {
+  "base_currency": string,
+  "rates": TCurrencyCode[]
+}
+
+export type ServerResponse<T> = {
+  success: boolean;
+} & T;
+
+export type CurrencyInfoResponse = ServerResponse<{
+  info: TCurrencyInfo;
+}>

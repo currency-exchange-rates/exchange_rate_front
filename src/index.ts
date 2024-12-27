@@ -1,5 +1,5 @@
 import './styles/index.css';
-import { CurrencyRates, ICustomSelect } from './types';
+import {CurrencyRates, ICustomSelect, TCurrencyCode} from './types';
 import {createInitialInfo} from "./utils/info";
 import {getInitialInfo} from "./utils/api";
 
@@ -113,11 +113,18 @@ currencyFromInput.addEventListener('input', updateCurrencyTo);
 // Инициализация работы с кастомными селекторами
 ICustomSelect.hideOpenSelect();
 
+export const items: any = {
+  "base_currency": "USD",
+  "rates": [
+    {"RUB": 3.6725},
+    {"JPY": 70.2515},
+  ]
+}
 
+createInitialInfo(items);
 
-
-// Promise.all([getInitialInfo()])
-//   .then(([ items]) => {
+// Promise.all([getInitialInfo('USD')])
+//   .then(([items]) => {
 //     createInitialInfo(items);
 //   })
 //   .catch(console.error);
