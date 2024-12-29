@@ -1,0 +1,14 @@
+.form__label {
+  color: var(--text-color-main);
+  font: var(--text-sb-l);
+  margin-bottom: 20px;
+  padding-left: 28px;
+}
+
+@media (max-width: 880px) {
+  .form__label {
+    font: var(--text-r-m);
+    margin-bottom: 4px;
+    padding-left: 0;
+  }
+}

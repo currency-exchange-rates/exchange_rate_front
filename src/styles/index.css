@@ -1,7 +1,42 @@
-@import url("../fonts/fonts.css");
+@import url('../../public/fonts/fonts.css');
+@import url('./variables.css');
 
-@import url("../blocks/page/page.css");
-@import url("../blocks/page-container/page-container.css");
+@import url('../blocks/page/page.css');
+@import url('../blocks/page-container/page-container.css');
 
 @import url("../blocks/header/__logo/header__logo.css");
 @import url("../blocks/header/__logo-image/header__logo-image.css");
+@import url("../blocks/header/__logo-icon/header__logo-icon.css");
+@import url("../blocks/header/__logo-icon-container/header__logo-icon-container.css");
+
+@import url("../blocks/header/__header/header.css");
+@import url("../blocks/footer/__footer/footer.css");
+
+@import url("../blocks/footer/__socials-container/footer__socials-container.css");
+
+@import url('../blocks/main/main.css');
+@import url('../blocks/main/__content/main__content.css');
+@import url('../blocks/main/__title/main__title.css');
+
+@import url('../blocks/form/form.css');
+@import url('../blocks/form/__select/form__select.css');
+@import url('../blocks/form/__label/form__label.css');
+@import url('../blocks/form/__container/form__container.css');
+@import url('../blocks/form/__container-item/form__container-item.css');
+@import url('../blocks/form/__button-swap/form__button-swap.css');
+@import url('../blocks/form/__input/form__input.css');
+@import url('../blocks/info/__item/info__item.css');
+@import url('../blocks/info/__list/info__list.css');
+
+@import url('../blocks/custom-select/custom-select.css');
+
+p {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  font: inherit;
+  border: none;
+  color: inherit;
+}
