@@ -248,6 +248,9 @@ export interface TCurrencyCode {
   string: number
 }
 
+export interface TDate {
+}
+
 export interface TCurrencyInfo {
   "base_currency": string,
   "rates": TCurrencyCode[]

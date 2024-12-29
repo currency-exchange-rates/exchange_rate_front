@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 4px
+  gap: 4px;
+  font: var(--text-r-s);
+  color: var(--text-color-main);
 }
 
 @media (max-width: 880px) {

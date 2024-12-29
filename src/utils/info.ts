@@ -1,4 +1,4 @@
-import {TCurrencyCode, TCurrencyInfo} from "../types";
+import {TCurrencyCode, TCurrencyInfo, TDate} from "../types";
 
 const infoItem = document.getElementById('template-info') as HTMLTemplateElement;
 const infoItemTemplateContent = infoItem.content as HTMLTemplateElement["content"]
@@ -6,30 +6,36 @@ const infoItemTemplate = infoItemTemplateContent.querySelector('.info__item') as
 const containerInfoList = document.querySelector('.info__list') as HTMLElement;
 
 
-const items = {
-  "base_currency": "USD",
-  "rates": [
-    {"RUB": 3.6725},
-    {"JPY": 70.2515},
-  ]
-}
-
-export function createInfoList(item: TCurrencyCode) {
+export function createInfoList(item: any) {
   const newItem = infoItemTemplate.cloneNode(true) as any;
   const textItem = newItem.querySelector('.info__item-text');
 
-  textItem.textContent = item;
+  for (let key in item) {
+    textItem.innerText = `1 ${key} = ${item[key]}`;
+  }
 
   return newItem;
 }
 
-export function addInfo(item: string) {
-  containerInfoList?.prepend(item);
+export function createDate(date: TDate) {
+  const newItem = infoItemTemplate.cloneNode(true) as any;
+  const textItem = newItem.querySelector('.info__item-text');
+
+  textItem.innerText = `Данные курса предоставлены на ${date}`;
+
+  return newItem;
+}
+
+export function addInfo(newItem: any) {
+  containerInfoList.prepend(newItem);
 }
 
 export function createInitialInfo(items: TCurrencyInfo) {
+
   items.rates.forEach((item) => {
-    console.log(items)
-    addInfo(createInfoList(item) && console.log(item));
+    addInfo(createInfoList(item));
   });
 }
+
+let date = new Date()
+addInfo(createDate(date.toLocaleString()));

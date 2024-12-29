@@ -1,7 +1,6 @@
 import './styles/index.css';
-import {CurrencyRates, ICustomSelect, TCurrencyCode} from './types';
+import {CurrencyRates, ICustomSelect} from './types';
 import {createInitialInfo} from "./utils/info";
-import {getInitialInfo} from "./utils/api";
 
 const rates: CurrencyRates = {
   USD: 1,
