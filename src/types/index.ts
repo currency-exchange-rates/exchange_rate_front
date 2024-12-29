@@ -38,9 +38,9 @@ export class ICustomSelect {
         selectedIndex = index;
         selectedValue = value;
         selectedContent = text;
-        selectedIconPath = `/images/countries-icons/${value.toUpperCase()}.svg`;
+        selectedIconPath = `./images/countries-icons/${value.toUpperCase()}.svg`;
       }
-      const iconPath = `/images/countries-icons/${value.toUpperCase()}.svg`;
+      const iconPath = `./images/countries-icons/${value.toUpperCase()}.svg`;
       items.push(
         `<li class="${this.OPTION}${selectedClass}" data-select="option" data-value="${value}" data-index="${index}">
           <img src="${iconPath}" alt="${value}" class="custom-option-icon"> 
@@ -130,7 +130,7 @@ export class ICustomSelect {
 
       // Обновляем путь к иконке для выбранной валюты
       const selectedValue = elOption?.dataset.value ?? '';
-      const iconPath = `/images/countries-icons/${selectedValue.toUpperCase()}.svg`;  // Путь к иконке
+      const iconPath = `./images/countries-icons/${selectedValue.toUpperCase()}.svg`;  // Путь к иконке
       let iconImg = this._elToggle.querySelector('img') as HTMLImageElement;
 
       if (!iconImg) {
