@@ -1,0 +1,31 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_154_54459)">
+<mask id="mask0_154_54459" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<circle cx="24" cy="24" r="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_154_54459)">
+<g clip-path="url(#clip1_154_54459)">
+<mask id="mask1_154_54459" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-2" y="0" width="65" height="48">
+<path d="M-2 0H62.0031V48H-2V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_154_54459)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 0H70.075V12H-2V0Z" fill="#FFFF00"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 12H70.075V24H-2V12Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 24H70.075V36H-2V24Z" fill="#BE0027"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 36H70.075V48H-2V36Z" fill="#3B5AA3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2 0V48L33.8031 24.0656L-2 0Z" fill="#239E46"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7375 13.2562C4.76877 12.8531 1.1219 19.2094 1.13127 24.1219C1.11252 29.9344 6.62502 34.7156 11.7063 34.4344C8.96877 33.1406 5.61252 29.4937 5.59377 24.0937C5.56565 19.2094 8.3594 14.9531 12.7469 13.2562H12.7375Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.625 18.4688L11.5 17.5969L10.1312 18.0281L10.6187 16.6781L9.79373 15.5156L11.2187 15.5719L12.0625 14.4188L12.4656 15.7969L13.8156 16.2469L12.6344 17.0438L12.625 18.4688ZM12.5969 23.3531L11.4719 22.4719L10.1031 22.9031L10.6 21.5625L9.7656 20.4L11.2 20.4469L12.0437 19.3031L12.4375 20.6719L13.7969 21.1313L12.6062 21.9281L12.5969 23.3531ZM12.6156 28.2844L11.4906 27.4031L10.1312 27.8344L10.6187 26.4938L9.79373 25.3313L11.2187 25.3781L12.0625 24.2344L12.4656 25.6031L13.8156 26.0531L12.6344 26.8594L12.6156 28.2844ZM12.5969 33.2531L11.4719 32.3813L10.0937 32.8125L10.5906 31.4625L9.75623 30.3L11.1906 30.3563L12.0344 29.2031L12.4281 30.5813L13.7875 31.0313L12.5969 31.8281V33.2531Z" fill="white"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_154_54459">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+<clipPath id="clip1_154_54459">
+<rect width="64" height="48" fill="white" transform="translate(-2)"/>
+</clipPath>
+</defs>
+</svg>
