@@ -7,21 +7,28 @@
   justify-content: space-between;
   position: relative;
   gap: 32px;
-  padding: 52px 55px 80px 55px;
+  padding: 52px 55px 20px 55px;
 }
 
 @media (max-width: 880px) {
   .form {
-    justify-content: center;
-    gap: 50px;
-    padding: 24px 20px 100px 20px;
+    justify-content: space-between;
+    padding: 24px 20px 20px 20px;
+  }
+  .form__container:first-child {
+    gap: 8px;
+  }
+  .form__container:last-child {
+    gap: 32px;
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 360px) {
   .form {
-    justify-content: center;
-    gap: 50px;
-    padding: 24px 20px 60px 20px;
+    justify-content: space-between;
+    padding: 24px 20px 20px 20px;
+  }
+  .form:first-child {
+    gap: 8px;
   }
 }

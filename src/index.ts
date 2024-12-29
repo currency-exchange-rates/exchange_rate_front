@@ -1,5 +1,6 @@
 import './styles/index.css';
-import { CurrencyRates, ICustomSelect } from './types';
+import {CurrencyRates, ICustomSelect} from './types';
+import {createInitialInfo} from "./utils/info";
 
 const rates: CurrencyRates = {
   USD: 1,
@@ -40,12 +41,12 @@ function swapCurrencies(): void {
   targetCurrencyButton.innerHTML = '';
 
   const newBaseCurrencyImage = document.createElement('img');
-  newBaseCurrencyImage.src = `/images/countries-icons/${targetCurrencyValue.toUpperCase()}.svg`;
+  newBaseCurrencyImage.src = `./images/countries-icons/${targetCurrencyValue.toUpperCase()}.svg`;
   newBaseCurrencyImage.alt = targetCurrencyValue;
   baseCurrencyButton.appendChild(newBaseCurrencyImage);
 
   const newTargetCurrencyImage = document.createElement('img');
-  newTargetCurrencyImage.src = `/images/countries-icons/${baseCurrencyValue.toUpperCase()}.svg`;
+  newTargetCurrencyImage.src = `./images/countries-icons/${baseCurrencyValue.toUpperCase()}.svg`;
   newTargetCurrencyImage.alt = baseCurrencyValue;
   targetCurrencyButton.appendChild(newTargetCurrencyImage);
 
@@ -110,3 +111,19 @@ currencyFromInput.addEventListener('input', updateCurrencyTo);
 
 // Инициализация работы с кастомными селекторами
 ICustomSelect.hideOpenSelect();
+
+export const items: any = {
+  "base_currency": "USD",
+  "rates": [
+    {"RUB": 3.6725},
+    {"JPY": 70.2515},
+  ]
+}
+
+createInitialInfo(items);
+
+// Promise.all([getInitialInfo('USD')])
+//   .then(([items]) => {
+//     createInitialInfo(items);
+//   })
+//   .catch(console.error);

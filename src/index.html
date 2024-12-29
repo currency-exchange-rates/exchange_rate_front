@@ -11,7 +11,7 @@
   <div class="header__logo">
     <a class="header__logo-image" href="#"></a>
     <button class="header__logo-icon-container">
-      <img src="images/utils-icons/language-icon.svg" alt="Иконка планеты" class="header__logo-icon">
+      <img src="./images/utils-icons/language-icon.svg" alt="Иконка планеты" class="header__logo-icon">
       EN
     </button>
   </div>
@@ -23,13 +23,6 @@
       <div class="form__container">
         <div class="form__container-item">
           <label class="form__label" for="base-currency">Хочу продать</label>
-          <!-- <select class="form__select" name="currency" id="base-currency" size="1">
-            <option class="form__select-option" value="">Выберите валюту</option>
-            <option value="USD">Доллар США</option>
-            <option value="GBP">Фунт стерлингов</option>
-            <option value="JPY">Японская иена</option>
-            <option value="RUB">Российский рубль</option>
-          </select> -->
           <div id="custom-select-container-base"></div>
         </div>
 
@@ -38,13 +31,6 @@
 
         <div class="form__container-item">
           <label class="form__label" for="target-currency">Хочу получить</label>
-          <!-- <select class="form__select" name="currency" id="target-currency" size="1">
-            <option value="" selected>Выберите валюту</option>
-            <option value="USD">Доллар США</option>
-            <option value="GBP">Фунт стерлингов</option>
-            <option value="JPY">Японская иена</option>
-            <option value="RUB">Российский рубль</option>
-          </select> -->
           <div id="custom-select-container-target"></div>
         </div>
       </div>
@@ -67,6 +53,10 @@
           name="currency-to" readonly minlength="1" maxlength="25"
         >
       </div>
+
+      <ul class="info__list">
+      </ul>
+
     </form>
   </section>
 </main>
@@ -75,7 +65,7 @@
   <div class="footer__socials-container">
     <a href="#" aria-label="Whats App">
       <img
-        src="images/social-icons/icon-Watsapp.svg"
+        src="./images/social-icons/icon-Watsapp.svg"
         alt="Whats App логотип"
         width="40"
         height="40"
@@ -83,7 +73,7 @@
     </a>
     <a href="#" aria-label="Telegram">
       <img
-        src="images/social-icons/icon-Telegram.svg"
+        src="./images/social-icons/icon-Telegram.svg"
         alt="Telegram логотип"
         width="40"
         height="40"
@@ -91,14 +81,21 @@
     </a>
     <a href="#" aria-label="Вконтакте">
       <img
-        src="images/social-icons/icon-vk.svg"
+        src="./images/social-icons/icon-vk.svg"
         alt="Вконтакте логотип"
         width="40"
         height="40"
       />
     </a>
   </div>
-  <p>© Все права защищены</p>
+  <p>&copy; Все права защищены</p>
 </footer>
+
+
+<template id="template-info">
+  <li class="info__item">
+    <p class="info__item-text"></p>
+  </li>
+</template>
 </body>
 </html>
