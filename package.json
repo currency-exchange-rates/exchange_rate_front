@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "homepage": "./",
   "scripts": {
+    "start": "webpack serve",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development",
     "predeploy": "npm run build",

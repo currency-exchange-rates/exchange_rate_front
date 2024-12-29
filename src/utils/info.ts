@@ -1,4 +1,4 @@
-import {TCurrencyCode, TCurrencyInfo, TDate} from "../types";
+import {TCurrencyInfo, TDate} from "../types";
 
 const infoItem = document.getElementById('template-info') as HTMLTemplateElement;
 const infoItemTemplateContent = infoItem.content as HTMLTemplateElement["content"]

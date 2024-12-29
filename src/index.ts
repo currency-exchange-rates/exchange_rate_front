@@ -41,12 +41,12 @@ function swapCurrencies(): void {
   targetCurrencyButton.innerHTML = '';
 
   const newBaseCurrencyImage = document.createElement('img');
-  newBaseCurrencyImage.src = `/images/countries-icons/${targetCurrencyValue.toUpperCase()}.svg`;
+  newBaseCurrencyImage.src = `./images/countries-icons/${targetCurrencyValue.toUpperCase()}.svg`;
   newBaseCurrencyImage.alt = targetCurrencyValue;
   baseCurrencyButton.appendChild(newBaseCurrencyImage);
 
   const newTargetCurrencyImage = document.createElement('img');
-  newTargetCurrencyImage.src = `/images/countries-icons/${baseCurrencyValue.toUpperCase()}.svg`;
+  newTargetCurrencyImage.src = `./images/countries-icons/${baseCurrencyValue.toUpperCase()}.svg`;
   newTargetCurrencyImage.alt = baseCurrencyValue;
   targetCurrencyButton.appendChild(newTargetCurrencyImage);
 
